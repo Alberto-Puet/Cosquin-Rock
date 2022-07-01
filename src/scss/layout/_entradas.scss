@@ -1,0 +1,82 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.entradas {
+    background-color: v.$oscuro;
+    height: 130rem;
+    @include m.tablet{
+        height: 80rem;
+    }
+
+    h3 {
+        text-align: center;
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        font-family: v.$fuente-secundaria;
+    }
+}
+
+.contenedor-entradas {
+    @include m.desktop {
+        @include m.grid(2, 1rem);
+    }
+
+    .pase {
+        @include m.tablet{
+            width: 40rem;
+        margin-bottom: 6rem;
+        }
+        margin: 0 auto 2rem;
+        width: 30rem;
+        background-color: #48e;
+        text-align: center;
+        border-radius: .4rem;
+        text-align: center;
+        box-shadow: 2px 2px 18px;
+        padding-bottom: .5rem;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-family: v.$fuente-secundaria;
+            background-color: v.$bordo1;
+            margin: 0;
+        }
+
+        p {
+            color: v.$blanco;
+            font-family: v.$fuente-secundaria;
+            font-weight: 700;
+            font-size: 3rem;
+            margin-top: 5rem;
+        }
+        span{
+            font-weight: 500;
+            color: v.$blanco;
+            font-size: 2rem;
+        }
+
+    }
+    .individual{
+        padding-bottom: 5rem;
+    }
+}
+
+.dos-dias{
+    height: 25rem;
+}
+
+h4 {
+    font-family: v.$fuente-secundaria;
+    font-weight: 800;
+    background-color: v.$bordo1;
+    font-size: 2.5rem;
+}
+
+.lista{
+    font-family: v.$fuente-secundaria;
+    font-weight: 600;
+    font-size: 1.7rem;
+}

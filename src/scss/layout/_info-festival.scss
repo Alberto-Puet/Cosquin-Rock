@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.info-festival {
+
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+    }
+
+    .imagen {
+        width: 95%;
+        margin: 3rem auto;
+
+        @include m.tablet {
+            margin-top: 3rem;
+            padding: 1rem;
+        }
+    }
+    .info{
+        padding: 2rem;
+    }
+}
+
+.info {
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        font-family: v.$fuente_secundaria;
+        font-size: 5rem;
+    }
+
+    .fecha {
+        color: v.$rosa;
+        font-family: v.$fuente_secundaria;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 1.5;
+        font-weight: 500;
+    }
+}
